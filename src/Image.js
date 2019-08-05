@@ -267,12 +267,7 @@ class Image extends Component {
               : null
           }
         >
-          {ThumbnailImageComponent ? (
-            <ThumbnailImageComponent
-              {...this.props}
-              imageProps={thumbnailProps}
-            />
-          ) : /wmv|avi|ogg|mp4/.test(thumbnailProps.src) ? (
+          {/wmv|avi|ogg|mp4/.test(thumbnailProps.src) ? (
             <video {...thumbnailProps} />
           ) : (
             <img {...thumbnailProps} />
