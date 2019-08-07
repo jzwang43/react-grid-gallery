@@ -4,6 +4,7 @@
   "description": "Justified gallery component for React.",
   "main": "lib/Gallery.js",
   "dependencies": {
+    "mime-types": "^2.1.24",
     "prop-types": "^15.5.8",
     "react-images": "^0.5.16"
   },

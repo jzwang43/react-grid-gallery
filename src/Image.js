@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import CheckButton from "./CheckButton.js";
-
+import {lookup} from 'mime-types';
 class Image extends Component {
   constructor(props) {
     super(props);
@@ -267,7 +267,7 @@ class Image extends Component {
               : null
           }
         >
-          {/wmv|avi|ogg|mp4/.test(thumbnailProps.src) ? (
+          {lookup(thumbnailProps.src).includes('video') ? (
             <video {...thumbnailProps} />
           ) : (
             <img {...thumbnailProps} />
